@@ -1,14 +1,14 @@
 # De indeling van de groepje
 
-## Api: **Jelmer**, Maarten, Barish, Dave en Frank v/o
+## Api: _Jelmer_, Maarten, Barish, Dave en Frank v/o
 
-## Fr1: **Stijn**, Thom, Laurens, Joey, Mike Bemer
+## Fr1: _Stijn_, Thom, Laurens, Joey, Mike Bemer
 
-## Fr2: **Paul**,Mike Dorsman, Niels, Gerrit, Melvin en Seyit
+## Fr2: _Paul_,Mike Dorsman, Niels, Gerrit, Melvin en Seyit
 
-## Beveiliging: **Pim**, Furkan, Sander, Ivor, Haroun en Ivar
+## Beveiliging: _Pim_, Furkan, Sander, Ivor, Haroun en Ivar
 
-## Backend: **Taco**, Reinbert, Stefan, Reinier en Arjen
+## Backend: _Taco_, Reinbert, Stefan, Reinier en Arjen
 
 Beginnaam is groepsleider.
 
