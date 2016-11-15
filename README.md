@@ -10,6 +10,6 @@
 
 ## Backend: _Taco_, Reinbert, Stefan, Reinier en Arjen
 
-Beginnaam is groepsleider.
+Schuingedrukte namen zijn groepsleiders
 
 
