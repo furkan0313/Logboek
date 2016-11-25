@@ -47,6 +47,7 @@
 
             .title {
                 font-size: 84px;
+                color: #abff93;
             }
 
             .links > a {
@@ -79,7 +80,8 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    FeelsBadMan
+                    <img src="/img/FeelsBadMan.jpg" alt="FeelsBadMan">
                 </div>
 
                 <div class="links">
