@@ -28,10 +28,10 @@ class User extends Authenticatable
     ];
 
     public function class() {
-        return $this->belongsToMany(\Class::class)->first();
+        return $this->belongsToMany('App\Class')->first();
     }
 
     public function entries() {
-        return $this->hasMany(\JournalEntry::class);
+        return $this->hasMany(JournalEntry::class);
     }
 }
