@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateClassUserPivotTable extends Migration
+class CreateGroupUserPivotTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,12 @@ class CreateClassUserPivotTable extends Migration
      */
     public function up()
     {
-        Schema::create('class_user', function (Blueprint $table) {
-            $table->integer('class_id')->unsigned()->index();
-            $table->foreign('class_id')->references('id')->on('classes')->onDelete('cascade');
+        Schema::create('group_user', function (Blueprint $table) {
+            $table->integer('group_id')->unsigned()->index();
+            $table->foreign('group_id')->references('id')->on('groups')->onDelete('cascade');
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->primary(['class_id', 'user_id']);
+            $table->primary(['group_id', 'user_id']);
         });
     }
 
@@ -28,6 +28,6 @@ class CreateClassUserPivotTable extends Migration
      */
     public function down()
     {
-        Schema::drop('class_user');
+        Schema::drop('group_user');
     }
 }

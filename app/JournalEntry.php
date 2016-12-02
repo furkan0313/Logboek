@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class JournalEntry extends Model
 {
     public function questions() {
-   		return $this->belongsToMany(\JournalQuestion::class)->withPivot('value');
+   		return $this->belongsToMany(JournalQuestion::class)->withPivot('value');
    	}
 
    	public function getQuestionAnswer($id) {
@@ -15,6 +15,6 @@ class JournalEntry extends Model
    	}
 
    	public function user() {
-   		return $this->belongsTo(\User::class);
+   		return $this->belongsTo(User::class);
    	}
 }

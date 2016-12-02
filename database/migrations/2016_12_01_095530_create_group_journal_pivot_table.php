@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateClassJournalPivotTable extends Migration
+class CreateGroupJournalPivotTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,12 @@ class CreateClassJournalPivotTable extends Migration
      */
     public function up()
     {
-        Schema::create('class_journal', function (Blueprint $table) {
-            $table->integer('class_id')->unsigned()->index();
-            $table->foreign('class_id')->references('id')->on('classes')->onDelete('cascade');
+        Schema::create('group_journal', function (Blueprint $table) {
+            $table->integer('group_id')->unsigned()->index();
+            $table->foreign('group_id')->references('id')->on('groups')->onDelete('cascade');
             $table->integer('journal_id')->unsigned()->index();
             $table->foreign('journal_id')->references('id')->on('journals')->onDelete('cascade');
-            $table->primary(['class_id', 'journal_id']);
+            $table->primary(['group_id', 'journal_id']);
         });
     }
 
@@ -28,6 +28,6 @@ class CreateClassJournalPivotTable extends Migration
      */
     public function down()
     {
-        Schema::drop('class_journal');
+        Schema::drop('group_journal');
     }
 }

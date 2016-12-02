@@ -16,3 +16,20 @@ use Illuminate\Http\Request;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
+
+
+Route::get('/users', function(){
+   // return all users
+});
+
+Route::get('/users/{user}', function(){
+    // return user which is specific by id.
+});
+
+Route::get('/users', function(){
+    // return all users
+});
+
+Route::get('/entries', function(){
+    // return all users
+});
