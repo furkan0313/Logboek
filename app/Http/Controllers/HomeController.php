@@ -25,11 +25,4 @@ class HomeController extends Controller
     {
         return view('home');
     }
-
-    public function sayHai($greet, $name)
-    {
-        return view('kappa/hello', [
-            "name"=>$greet.' '.$name
-        ]);
-    }
 }
