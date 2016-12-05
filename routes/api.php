@@ -13,23 +13,21 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
+/* Resource routes */
+Route::resource('/users', 'UserController');
+Route::resource('/courses', 'CourseController');
+Route::resource('/entries', 'EntryController');
+Route::resource('/groups', 'GroupController');
+Route::resource('/journals', 'JournalController');
 
 
-Route::get('/users', function(){
-   // return all users
+Route::group(['prefix' => 'groups'], function() {
+    Route::resource('/users', 'GroupUserController');
+    Route::resource('/journals', 'GroupJournalController');
+    Route::resource('/courses', 'GroupCourseController');
 });
 
-Route::get('/users/{user}', function(){
-    // return user which is specific by id.
-});
-
-Route::get('/users', function(){
-    // return all users
-});
-
-Route::get('/entries', function(){
-    // return all users
+Route::group(['prefix' => 'journals'], function() {
+    Route::resource('/entries', 'JournalEntryController');
+    Route::resource('/questions', 'JournalQuestionController');
 });
