@@ -14,20 +14,20 @@ use Illuminate\Http\Request;
 */
 
 /* Resource routes */
-Route::resource('/users', 'UserController');
-Route::resource('/courses', 'CourseController');
-Route::resource('/entries', 'EntryController');
-Route::resource('/groups', 'GroupController');
-Route::resource('/journals', 'JournalController');
+Route::resource('/users', 'Api\UserController');
+Route::resource('/courses', 'Api\CourseController');
+Route::resource('/entries', 'Api\EntryController');
+Route::resource('/groups', 'Api\GroupController');
+Route::resource('/journals', 'Api\JournalController');
 
 
 Route::group(['prefix' => 'groups'], function() {
-    Route::resource('/users', 'GroupUserController');
-    Route::resource('/journals', 'GroupJournalController');
-    Route::resource('/courses', 'GroupCourseController');
+    Route::resource('/users', 'Api\GroupUserController');
+    Route::resource('/journals', 'Api\GroupJournalController');
+    Route::resource('/courses', 'Api\GroupCourseController');
 });
 
 Route::group(['prefix' => 'journals'], function() {
-    Route::resource('/entries', 'JournalEntryController');
-    Route::resource('/questions', 'JournalQuestionController');
+    Route::resource('/entries', 'Api\JournalEntryController');
+    Route::resource('/questions', 'Api\JournalQuestionController');
 });
