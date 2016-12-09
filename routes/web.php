@@ -20,3 +20,5 @@ Route::get('/login', 'Auth\LoginController@ShowLoginForm');
 Route::post('/login', 'Auth\LoginController@Login');
 
 Route::get('/home', 'HomeController@index');
+
+Route::post('/logout', 'Auth\LoginController@logout');
