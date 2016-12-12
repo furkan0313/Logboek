@@ -9,33 +9,30 @@
 				
 		
 		<div class="row">
-			<div class="col-lg-12">
-				<h2>Alerts</h2>
-				<div class="alert bg-primary" role="alert">
-					<svg class="glyph stroked empty-message"><use xlink:href="#stroked-empty-message"></use></svg> Welcome to the admin dashboard panel bootstrap template <a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
-				</div>
-				<div class="alert bg-success" role="alert">
-					<svg class="glyph stroked checkmark"><use xlink:href="#stroked-checkmark"></use></svg> Welcome to the admin dashboard panel bootstrap template <a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
-				</div>
-				<div class="alert bg-warning" role="alert">
-					<svg class="glyph stroked flag"><use xlink:href="#stroked-flag"></use></svg> Welcome to the admin dashboard panel bootstrap template <a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
-				</div>
-				<div class="alert bg-danger" role="alert">
-					<svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Welcome to the admin dashboard panel bootstrap template <a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
-				</div>
-			</div>
+
 		</div><!--/.row-->		
 		
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<h2>Basic Panels</h2>
+				<h2>Laatst ingeleverde items</h2>
 			</div>
 			<div class="col-md-4">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						Default Panel
+						Java
 					</div>
+                    <div class="panel-body">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Kies uw les
+                                <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Les 1</a></li>
+                                <li><a href="#">Les 2</a></li>
+                                <li><a href="#">Les 3</a></li>
+                            </ul>
+                        </div>
+                    </div>
 					<div class="panel-body">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
 					</div>
@@ -43,10 +40,21 @@
 			</div>
 			
 			<div class="col-md-4">
-				<div class="panel panel-primary">
+				<div class="panel panel-default">
 					<div class="panel-heading">
-						Primary Panel
+						Android
 					</div>
+                    <div class="panel-body">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Kies uw les
+                                <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Les 1</a></li>
+                                <li><a href="#">Les 2</a></li>
+                                <li><a href="#">Les 3</a></li>
+                            </ul>
+                        </div>
+                    </div>
 					<div class="panel-body">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
 					</div>
@@ -54,10 +62,21 @@
 			</div>
 			
 			<div class="col-md-4">
-				<div class="panel panel-success">
+				<div class="panel panel-default">
 					<div class="panel-heading">
-						Success Panel
+						Burgerschap
 					</div>
+                    <div class="panel-body">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Kies uw les
+                                <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Thema 1</a></li>
+                                <li><a href="#">Thema 2</a></li>
+                                <li><a href="#">Thema 3</a></li>
+                            </ul>
+                        </div>
+                    </div>
 					<div class="panel-body">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
 					</div>
@@ -67,146 +86,52 @@
 		</div><!-- /.row -->
 			
 		<div class="row">
-			<div class="col-md-4">
-				<div class="panel panel-info">
-					<div class="panel-heading">
-						Info Panel
-					</div>
-					<div class="panel-body">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
-					</div>
-				</div>
-			</div>
 
-			<div class="col-md-4">
-				<div class="panel panel-warning">
-					<div class="panel-heading">
-						Warning Panel
-					</div>
-					<div class="panel-body">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-4">
-				<div class="panel panel-danger">
-					<div class="panel-heading">
-						Danger Panel
-					</div>
-					<div class="panel-body">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
-					</div>
-				</div>
-			</div>
 			
 		</div><!-- /.row -->
-		
-		
-		
-		
-		<div class="row">
-			<div class="col-lg-12">
-				<h2>Widget Panels</h2>
-			</div>
-			
-			<div class="col-md-6">
-				<div class="panel panel-blue">
-					<div class="panel-heading dark-overlay">Blue Panel</div>
-					<div class="panel-body">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
-					</div>
-				</div>
-			</div><!--/.col-->
-			
-			<div class="col-md-6">
-				<div class="panel panel-teal">
-					<div class="panel-heading dark-overlay">Teal Panel</div>
-					<div class="panel-body">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
-					</div>
-				</div>
-			</div><!--/.col-->
-			
-			<div class="col-md-6">
-				<div class="panel panel-orange">
-					<div class="panel-heading dark-overlay">Orange Panel</div>
-					<div class="panel-body">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
-					</div>
-				</div>
-			</div><!--/.col-->
-			
-			<div class="col-md-6">
-				<div class="panel panel-red">
-					<div class="panel-heading dark-overlay">Red Panel</div>
-					<div class="panel-body">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
-					</div>
-				</div>
-			</div><!--/.col-->
-		</div><!--/.row-->	
 			
 		<div class="row">
-			<div class="col-lg-12">
-				<h2>Tab Panels</h2>
-			</div>
-			
-			<div class="col-md-6">
-				<div class="panel panel-default">
-					<div class="panel-body tabs">
-						<ul class="nav nav-tabs">
-							<li class="active"><a href="#tab1" data-toggle="tab">Tab 1</a></li>
-							<li><a href="#tab2" data-toggle="tab">Tab 2</a></li>
-							<li><a href="#tab3" data-toggle="tab">Tab 3</a></li>
-						</ul>
-		
-						<div class="tab-content">
-							<div class="tab-pane fade in active" id="tab1">
-								<h4>Tab 1</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget rutrum purus. Donec hendrerit ante ac metus sagittis elementum. Mauris feugiat nisl sit amet neque luctus, a tincidunt odio auctor. </p>
-							</div>
-							<div class="tab-pane fade" id="tab2">
-								<h4>Tab 2</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget rutrum purus. Donec hendrerit ante ac metus sagittis elementum. Mauris feugiat nisl sit amet neque luctus, a tincidunt odio auctor. </p>
-							</div>
-							<div class="tab-pane fade" id="tab3">
-								<h4>Tab 3</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget rutrum purus. Donec hendrerit ante ac metus sagittis elementum. Mauris feugiat nisl sit amet neque luctus, a tincidunt odio auctor. </p>
-							</div>
-						</div>
-					</div>
-				</div><!--/.panel-->
-			</div><!--/.col-->
-			
-			<div class="col-md-6">
-				<div class="panel panel-default">
-					<div class="panel-body tabs">
-					
-						<ul class="nav nav-pills">
-							<li class="active"><a href="#pilltab1" data-toggle="tab">Tab 1</a></li>
-							<li><a href="#pilltab2" data-toggle="tab">Tab 2</a></li>
-							<li><a href="#pilltab3" data-toggle="tab">Tab 3</a></li>
-						</ul>
-		
-						<div class="tab-content">
-							<div class="tab-pane fade in active" id="pilltab1">
-								<h4>Tab 1</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget rutrum purus. Donec hendrerit ante ac metus sagittis elementum. Mauris feugiat nisl sit amet neque luctus, a tincidunt odio auctor. </p>
-							</div>
-							<div class="tab-pane fade" id="pilltab2">
-								<h4>Tab 2</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget rutrum purus. Donec hendrerit ante ac metus sagittis elementum. Mauris feugiat nisl sit amet neque luctus, a tincidunt odio auctor. </p>
-							</div>
-							<div class="tab-pane fade" id="pilltab3">
-								<h4>Tab 3</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget rutrum purus. Donec hendrerit ante ac metus sagittis elementum. Mauris feugiat nisl sit amet neque luctus, a tincidunt odio auctor. </p>
-							</div>
-						</div>
-					</div>
-				</div><!--/.panel-->
-			</div><!-- /.col-->
-			
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><svg class="glyph stroked email"><use xlink:href="#stroked-email"></use></svg> Contact Form</div>
+                    <div class="panel-body">
+                        <form class="form-horizontal" action="" method="post">
+                            <fieldset>
+                                <!-- Name input-->
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="name">E-mail adres</label>
+                                    <div class="col-md-9">
+                                        <input id="name" name="email" type="text" placeholder="Your email" class="form-control">
+                                    </div>
+                                </div>
+
+                                <!-- Email input-->
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="email">Onderwerp</label>
+                                    <div class="col-md-9">
+                                        <input id="email" name="subject" type="text" placeholder="Subject" class="form-control">
+                                    </div>
+                                </div>
+
+                                <!-- Message body -->
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="message">Jou Bericht</label>
+                                    <div class="col-md-9">
+                                        <textarea class="form-control" id="message" name="message" placeholder="Vul hier je bericht in..." rows="5"></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Form actions -->
+                                <div class="form-group">
+                                    <div class="col-md-12 widget-right">
+                                        <button type="submit" class="btn btn-default btn-md pull-right">Submit</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
 		</div><!-- /.row -->
 <?php include 'includes/footer.php'; ?>
 </body>
