@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\JournalEntry;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,8 @@ class JournalEntryController extends Controller
      */
     public function index()
     {
-        //
+        $journalEntries = JournalEntry::all();
+        return response()->json($journalEntries);
     }
 
     /**
@@ -44,9 +46,9 @@ class JournalEntryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(JournalEntry $journalEntry)
     {
-        //
+        return response()->json($journalEntry);
     }
 
     /**
@@ -55,7 +57,7 @@ class JournalEntryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(JournalEntry $journalEntry)
     {
         //
     }
@@ -67,7 +69,7 @@ class JournalEntryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, JournalEntry $journalEntry)
     {
         //
     }
@@ -78,7 +80,7 @@ class JournalEntryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(JournalEntry $journalEntry)
     {
         //
     }
