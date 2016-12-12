@@ -29,7 +29,7 @@ class User extends Authenticatable
     ];
 
     public function groups() {
-        return $this->belongsToMany(Group::class)->first();
+        return $this->belongsToMany(Group::class);
     }
 
     public function entries() {
