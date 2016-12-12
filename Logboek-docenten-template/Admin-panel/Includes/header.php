@@ -25,4 +25,10 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->
 
+    <!-- Trajecten pagina -->
+    <link rel="stylesheet" type="text/css" href="css/trajecten/demo.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/trajecten/form-builder.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/trajecten/form-render.min.css">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
 </head>
