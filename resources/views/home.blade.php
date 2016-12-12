@@ -27,3 +27,9 @@
         <p><a class="btn btn-primary btn-lg hero-button" role="button" href="#">Lessen </a></p>
     </div>
 @endsection
+
+{{--@section('test')--}}
+    {{--@foreach($courses as $course)--}}
+        {{--{{$course}}--}}
+    {{--@endforeach--}}
+{{--@endsection--}}
