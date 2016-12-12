@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Group;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -12,9 +13,10 @@ class GroupUserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Group $group)
     {
-        //
+        $groupJournals = $group->users()->get();
+        return response()->json($groupJournals);
     }
 
     /**
@@ -44,9 +46,10 @@ class GroupUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Group $group, $user)
     {
-        //
+        $groupJournals = $group->users()->find($user);
+        return response()->json($groupJournals);
     }
 
     /**

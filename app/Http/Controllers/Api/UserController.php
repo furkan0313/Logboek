@@ -16,9 +16,6 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-
-        $test = explode("|", "maarten|test")[0];
-
         return response()->json($users);
     }
 
@@ -49,9 +46,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        //
+        return response()->json($user);
     }
 
     /**
@@ -60,7 +57,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
         //
     }
@@ -72,7 +69,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
         //
     }
@@ -83,7 +80,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
         //
     }

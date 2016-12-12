@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Course;
+use App\Group;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -12,9 +14,10 @@ class GroupCourseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Group $group)
     {
-        //
+        $groupCourses = $group->courses()->get();
+        return response()->json($groupCourses);
     }
 
     /**
@@ -44,9 +47,10 @@ class GroupCourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Group $group, $course)
     {
-        //
+        $groupCourse = $group->courses()->find($course);
+        return response()->json($groupCourse);
     }
 
     /**

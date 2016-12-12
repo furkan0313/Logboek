@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Group;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,8 @@ class GroupController extends Controller
      */
     public function index()
     {
-        //
+        $groups = Group::all();
+        return response()->json($groups);
     }
 
     /**
@@ -44,9 +46,9 @@ class GroupController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Group $group)
     {
-        //
+        return response()->json($group);
     }
 
     /**
@@ -55,7 +57,7 @@ class GroupController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Group $group)
     {
         //
     }
@@ -67,7 +69,7 @@ class GroupController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Group $group)
     {
         //
     }
@@ -78,7 +80,7 @@ class GroupController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Group $group)
     {
         //
     }

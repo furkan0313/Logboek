@@ -53,12 +53,10 @@
                                 <li><a href="{{ url('/login') }}"><button class="btn btn-primary btn-sm navbar-btn navbar-right" type="button" style="position:inherit;">Inloggen </button></a></li>
                             @endunless
                         @else
-                            <li role="presentation"><a href="#">First Item</a></li>
-                            <li role="presentation"><a href="#">Second Item</a></li>
-                            <li role="presentation"><a href="#">Third Item</a></li>
-                            {{--<li role="presentation">--}}
-                                {{--<a href="#"> </a>--}}
-                            {{--</li>--}}
+                            {{--<li role="presentation"><a href="#">First Item</a></li>--}}
+                            {{--<li role="presentation"><a href="#">Second Item</a></li>--}}
+                            {{--<li role="presentation"><a href="#">Third Item</a></li>--}}
+                            @yield('test')
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ auth()->user()->name }} <span class="caret"></span>
