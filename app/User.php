@@ -35,4 +35,10 @@ class User extends Authenticatable
     public function entries() {
         return $this->hasMany(JournalEntry::class);
     }
+
+    public function getCoursesAttribute() {
+        return $user->groups->reduce(function($courses, $group) {
+            return $courses->merge($group->courses);
+        }, collect())->keyBy('id');
+    }
 }
