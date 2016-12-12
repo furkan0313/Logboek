@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Course;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,8 @@ class CourseController extends Controller
      */
     public function index()
     {
-
+        $courses = Course::all();
+        return response()->json($courses);
     }
 
     /**
@@ -44,9 +46,9 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Course $course)
     {
-        //
+        return response()->json($course);
     }
 
     /**
@@ -55,7 +57,7 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Course $course)
     {
         //
     }
@@ -67,7 +69,7 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Course $course)
     {
         //
     }
@@ -78,7 +80,7 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Course $course)
     {
         //
     }

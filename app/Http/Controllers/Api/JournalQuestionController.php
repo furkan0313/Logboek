@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\JournalQuestion;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,8 @@ class JournalQuestionController extends Controller
      */
     public function index()
     {
-        //
+        $journalQuestions = JournalQuestion::all();
+        return response()->json($journalQuestions);
     }
 
     /**
@@ -41,21 +43,21 @@ class JournalQuestionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  JournalQuestion $journalQuestion
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(JournalQuestion $journalQuestion)
     {
-        //
+        return response()->json($journalQuestion);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int  JournalQuestion $journalQuestion
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(JournalQuestion $journalQuestion)
     {
         //
     }
@@ -64,10 +66,10 @@ class JournalQuestionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  int  JournalQuestion $journalQuestion
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, JournalQuestion $journalQuestion)
     {
         //
     }
@@ -75,10 +77,10 @@ class JournalQuestionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int  JournalQuestion $journalQuestion
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(JournalQuestion $journalQuestion)
     {
         //
     }
