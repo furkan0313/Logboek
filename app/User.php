@@ -37,7 +37,7 @@ class User extends Authenticatable
     }
 
     public function getCoursesAttribute() {
-        return $user->groups->reduce(function($courses, $group) {
+        return $this->groups->reduce(function($courses, $group) {
             return $courses->merge($group->courses);
         }, collect())->keyBy('id');
     }
