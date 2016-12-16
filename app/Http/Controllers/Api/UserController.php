@@ -49,8 +49,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(User $user, Request $request)
     {
+        $user->update($request->except(['_token', '_method']));
         return response()->json($user);
     }
 
@@ -74,7 +75,9 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $user = $user->update($request->except(['_token', '_method']));
+
+        return response()->json($user);
     }
 
     /**
@@ -85,6 +88,6 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        return response()->json($user->delete());
     }
 }
