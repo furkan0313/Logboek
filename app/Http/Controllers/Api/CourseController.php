@@ -22,17 +22,20 @@ class CourseController extends Controller
     /**
      * Show the form for creating a new resource.
      *
+     * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $course = Course::create($request->except(['_token', '_method']));
+
+        return response()->json(['success' => $course]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -43,7 +46,7 @@ class CourseController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param Course $course
      * @return \Illuminate\Http\Response
      */
     public function show(Course $course)
@@ -54,8 +57,9 @@ class CourseController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param Course $course
      * @return \Illuminate\Http\Response
+     * @internal param int $id
      */
     public function edit(Course $course)
     {
@@ -65,23 +69,26 @@ class CourseController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param Course $course
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Course $course)
     {
-        //
+        $course->update($request->except(['_token', '_method']));
+
+        return response()->json($course);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param Course $course
      * @return \Illuminate\Http\Response
+     * @internal param int $id
      */
     public function destroy(Course $course)
     {
-        //
+        return response()->json(['success' => $course->delete()]);
     }
 }

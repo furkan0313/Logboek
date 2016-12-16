@@ -16,23 +16,26 @@ class JournalController extends Controller
     public function index()
     {
         $journals = Journal::all();
+
         return response()->json($journals);
     }
 
     /**
      * Show the form for creating a new resource.
      *
+     * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $journal = Journal::create($request->except(['_token', '_method']));
+        return response()->json($journal);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -43,19 +46,21 @@ class JournalController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param Journal $journal
      * @return \Illuminate\Http\Response
      */
-    public function show(Journal $journal)
+    public function show(Journal $journal, Request $request)
     {
+        $journal->update($request->except(['_token', '_method']));
         return response()->json($journal);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param Journal $journal
      * @return \Illuminate\Http\Response
+     * @internal param int $id
      */
     public function edit(Journal $journal)
     {
@@ -65,23 +70,25 @@ class JournalController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param Journal $journal
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Journal $journal)
     {
-        //
+        $journal = $journal->update($request->except(['_token', '_method']));
+
+        return response()->json($journal);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param Journal $journal
      * @return \Illuminate\Http\Response
      */
     public function destroy(Journal $journal)
     {
-        //
+        return response()->json($journal->delete());
     }
 }

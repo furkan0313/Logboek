@@ -24,7 +24,7 @@ class GroupController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
     }
@@ -37,7 +37,8 @@ class GroupController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $group = Group::create($request->except(['_token', '_method']));
+        return response()->json($group);
     }
 
     /**
@@ -71,7 +72,9 @@ class GroupController extends Controller
      */
     public function update(Request $request, Group $group)
     {
-        //
+        $group = $group->update($request->except(['_token', '_method']));
+
+        return response()->json($group);
     }
 
     /**
@@ -82,6 +85,6 @@ class GroupController extends Controller
      */
     public function destroy(Group $group)
     {
-        //
+        return response()->json($group->delete());
     }
 }
