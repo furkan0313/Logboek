@@ -43,11 +43,16 @@ class JournalController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param Journal $journal
      * @return \Illuminate\Http\Response
+     * @internal param int $id
      */
-    public function show(Journal $journal)
+    public function show(Journal $journal, Request $request)
     {
+        $journal->update([
+           'name' =>  $request->name,
+           'name' =>  $request->name
+        ]);
         return response()->json($journal);
     }
 
