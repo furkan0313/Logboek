@@ -24,9 +24,9 @@ class GroupUserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request, Group $group)
     {
-        //
+        // Not needed
     }
 
     /**
@@ -35,9 +35,10 @@ class GroupUserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Group $group)
     {
-        //
+        $groupJournals = $group->users()->create($request->except(['_token', '_method']));
+        return response()->json($groupJournals);
     }
 
     /**
@@ -60,7 +61,7 @@ class GroupUserController extends Controller
      */
     public function edit($id)
     {
-        //
+        // Not needed
     }
 
     /**
@@ -70,9 +71,10 @@ class GroupUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Group $group, $user)
     {
-        //
+        $group->users()->attach($user);
+        return response()->json($group);
     }
 
     /**
@@ -81,8 +83,9 @@ class GroupUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Group $group, $user)
     {
-        //
+        $group->users()->detach($user);
+        return response()->json($group);
     }
 }
