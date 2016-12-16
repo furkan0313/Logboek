@@ -22,11 +22,14 @@ class UserController extends Controller
     /**
      * Show the form for creating a new resource.
      *
+     * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $user = User::create($request->except(['_token','_method']));
+
+        return response()->json($user);
     }
 
     /**
