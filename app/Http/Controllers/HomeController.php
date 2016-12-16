@@ -27,7 +27,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-//        $courses = User::courses();
-        return view('home');
+        $courses = auth()->user()->courses;
+        return view('home',compact('courses'));
     }
 }

@@ -25,9 +25,9 @@ class EntryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+
     }
 
     /**
@@ -38,7 +38,8 @@ class EntryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $entry = Entry::create($request->except(['_token', '_method']));
+        return response()->json($entry);
     }
 
     /**
@@ -49,6 +50,7 @@ class EntryController extends Controller
      */
     public function show(JournalEntry $entry)
     {
+        $entry->update($entry->except(['_token', '_method']));
         return response()->json($entry);
     }
 
@@ -72,7 +74,9 @@ class EntryController extends Controller
      */
     public function update(Request $request, JournalEntry $entry)
     {
-        //
+        $entry = $entry->update($request->except(['_token', '_method']));
+
+        return response()->json($entry);
     }
 
     /**
@@ -83,6 +87,6 @@ class EntryController extends Controller
      */
     public function destroy(JournalEntry $entry)
     {
-        //
+        return response()->json($entry->delete());
     }
 }

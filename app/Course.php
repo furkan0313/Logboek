@@ -13,4 +13,8 @@ class Course extends Model {
  	public function journals() {
  		return $this->hasMany(Journal::class);
  	}
+
+ 	public function getPublicImageLocationAttribute() {
+        return asset('uploads/courses/' . $this->image);
+    }
 }

@@ -26,8 +26,7 @@ class GroupController extends Controller
      */
     public function create(Request $request)
     {
-        $group = Group::create($request->except(['_token', '_method']));
-        return response()->json($group);
+        //
     }
 
     /**
@@ -38,7 +37,8 @@ class GroupController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $group = Group::create($request->except(['_token', '_method']));
+        return response()->json($group);
     }
 
     /**
