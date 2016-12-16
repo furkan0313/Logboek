@@ -22,11 +22,13 @@ class JournalController extends Controller
     /**
      * Show the form for creating a new resource.
      *
+     * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $journal = Journal::create($request->except(['_token', '_method']);
+        return response()->json($journal);
     }
 
     /**
@@ -49,10 +51,7 @@ class JournalController extends Controller
      */
     public function show(Journal $journal, Request $request)
     {
-        $journal->update([
-           'name' =>  $request->name,
-           'name' =>  $request->name
-        ]);
+        $journal->update($request->except(['_token', '_method']));
         return response()->json($journal);
     }
 
@@ -70,13 +69,15 @@ class JournalController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param Journal $journal
      * @return \Illuminate\Http\Response
+     * @internal param int $id
      */
     public function update(Request $request, Journal $journal)
     {
-        //
+        $journal = $journal->update($request->except(['_token', '_method']));
+        return response()->json($journal);
     }
 
     /**

@@ -27,10 +27,9 @@ class CourseController extends Controller
      */
     public function create(Request $request)
     {
-        $course = new Course;
-        $course->name = $request->name;
+        $course = Course::create($request->except(['_token', '_method']));
 
-        return response()->json(['success' => $course->save()]);
+        return response()->json(['success' => $course]);
     }
 
     /**
