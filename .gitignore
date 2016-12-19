@@ -1,13 +1,17 @@
+.env
+/.idea
 /node_modules
 /public/storage
 /storage/*.key
 /vendor
-/.idea
 Homestead.json
 Homestead.yaml
+<<<<<<< HEAD
 .env
 <<<<<<< HEAD
 config/jwt.php
 =======
 bootstrap/
 >>>>>>> e3cef37f78a39d15240ea6126ef8514e1f609ac4
+=======
+>>>>>>> b6c45a5f0e3b28b9b3cfd9ef7fc7a53a726dadf9
