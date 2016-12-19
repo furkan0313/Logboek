@@ -17,7 +17,12 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+
+    }
+
+    public function store()
+    {
+        dd('feest');
     }
 
     /**
@@ -25,9 +30,8 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function create()
     {
-        $courses = auth()->user()->courses;
-        return view('home',compact('courses'));
+        return view('home');
     }
 }

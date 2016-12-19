@@ -6,10 +6,11 @@
 @endsection
 
 @section('content')
-    @foreach($courses as $course)
-        <div class="jumbotron hero-technology" style="background:url('{{ $course->publicImageLocation }}');">
-            <h1 class="hero-title">{{$course->name}} </h1>
-            <p><a class="btn btn-primary btn-lg hero-button" role="button" href="#">Lessen </a></p>
-        </div>
-    @endforeach
+    <form action="example" method="POST">
+        <input type="text" name="title">
+        <input type="text" name="group">
+        <input type="text" name="group">
+
+        <input type="submit">
+    </form>
 @endsection

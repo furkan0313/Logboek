@@ -6,3 +6,5 @@
 /vendor
 Homestead.json
 Homestead.yaml
+config/jwt.php
+bootstrap/
