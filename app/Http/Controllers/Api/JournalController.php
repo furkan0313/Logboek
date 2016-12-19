@@ -29,8 +29,10 @@ class JournalController extends Controller
     public function create(Request $request)
     {
         $journal = Journal::create($request->except(['_token', '_method']));
+
         return response()->json($journal);
     }
+
 
     /**
      * Store a newly created resource in storage.
