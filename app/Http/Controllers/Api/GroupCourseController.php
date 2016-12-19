@@ -27,7 +27,7 @@ class GroupCourseController extends Controller
      */
     public function create()
     {
-        //
+        // Not needed
     }
 
     /**
@@ -36,9 +36,10 @@ class GroupCourseController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Group $group)
     {
-        //
+        $groupCourse = $group->courses()->create($request->except(['_token', '_method']));
+        return response()->json($groupCourse);
     }
 
     /**
@@ -71,9 +72,10 @@ class GroupCourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Group $group, $course)
     {
-        //
+        $group->courses()->attach($course);
+        return response()->json($group);
     }
 
     /**
@@ -82,8 +84,9 @@ class GroupCourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Group $group, $course)
     {
-        //
+        $group->courses()->detach($course);
+        return response()->json($group);
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Journal;
 use App\JournalQuestion;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -35,9 +36,10 @@ class JournalQuestionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Journal $journal)
     {
-        //
+        $journalEntries = $journal->questions()->create($request->except(['_token', '_method']));
+        return response()->json($journalEntries);
     }
 
     /**
@@ -69,19 +71,21 @@ class JournalQuestionController extends Controller
      * @param  int  JournalQuestion $journalQuestion
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, JournalQuestion $journalQuestion)
+    public function update(Journal $journal, $question)
     {
-        //
+        $journal->questions()->attach($question);
+        return response()->json($journal);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  JournalQuestion $journalQuestion
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(JournalQuestion $journalQuestion)
+    public function destroy(Journal $journal, $question)
     {
-        //
+        $journal->questions()->detach($question);
+        return response()->json($journal);
     }
 }
