@@ -6,4 +6,8 @@
 Homestead.json
 Homestead.yaml
 .env
+<<<<<<< HEAD
 config/jwt.php
+=======
+bootstrap/
+>>>>>>> e3cef37f78a39d15240ea6126ef8514e1f609ac4
