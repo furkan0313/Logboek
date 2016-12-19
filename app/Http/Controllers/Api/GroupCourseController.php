@@ -38,8 +38,8 @@ class GroupCourseController extends Controller
      */
     public function store(Request $request, Group $group)
     {
-        $groupCourse = $group->courses()->create($request->except(['_token', '_method']));
-        return response()->json($groupCourse);
+        $groupCourse = $group->courses()->attach($request->course_id);
+        return response()->json($group->courses()->get());
     }
 
     /**

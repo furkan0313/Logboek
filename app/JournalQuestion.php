@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class JournalQuestion extends Model {
 
+    protected $fillable = ["description", "type"];
+
    	public function journal() {
    		return $this->belongsTo(Journal::class);
    	}

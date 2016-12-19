@@ -37,8 +37,8 @@ class GroupJournalController extends Controller
      */
     public function store(Request $request, Group $group)
     {
-        $groupJournals = $group->journals()->create($request->except(['_token', '_method']));
-        return response()->json($groupJournals);
+        $groupJournals = $group->journals()->attach($request->journal_id);
+        return response()->json($group->journals()->get());
     }
 
     /**

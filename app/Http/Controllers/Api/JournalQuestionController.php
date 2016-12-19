@@ -38,8 +38,8 @@ class JournalQuestionController extends Controller
      */
     public function store(Request $request, Journal $journal)
     {
-        $journalEntries = $journal->questions()->create($request->except(['_token', '_method']));
-        return response()->json($journalEntries);
+        $journalQuestions = $journal->questions()->create($request->except(['_token', '_method']));
+        return response()->json($journalQuestions);
     }
 
     /**
