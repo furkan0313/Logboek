@@ -37,12 +37,12 @@ class DocentenController extends Controller
         ]);
     }
 
-    public function showJournal(Journal $journal)
+    public function showJournal($id)
     {
-        $journals = Journal::with('course')->get();
+        $journal = Journal::with('course')->whereId($id)->get();
 
-        return view('docenten/logboeken', [
-            'journals' => $journals
+        return view('docenten/logboeken/view', [
+            'journal' => $journal
         ]);
     }
 
