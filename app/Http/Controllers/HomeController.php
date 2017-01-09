@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Course;
 use App\Group;
+use App\Journal;
+use App\JournalQuestion;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -20,9 +22,45 @@ class HomeController extends Controller
 
     }
 
-    public function store()
+    public function index(User $user){
+        $courses = $user->courses;
+
+        return view('home',compact('courses'));
+    }
+
+    public function show($id)
     {
-        dd('feest');
+        $questions = Journal::find($id)->with('questions')->get();
+
+        foreach ($questions as $question){
+            var_dump($question);
+        }
+
+
+    }
+    public function store(Request $request)
+    {
+
+        $course = new Course();
+
+        $course->name = "PHP";
+        $course->image = "example.jpg";
+
+        $course->save();
+
+        $journal = new Journal();
+
+        $journal->name = $request->name;
+        $journal->course()->associate($course);
+
+        $journal->save();
+
+        $journal->questions()->create([
+            'description' => 'hoppa',
+            'type' => 'range'
+        ]);
+
+        dd($course);
     }
 
     /**

@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Journal;
 use Illuminate\Http\Request;
 
 class DocentenController extends Controller
 {
     public function index()
     {
+        $journals = Journal::with('course')->get();
+
         return view('docenten/index');
     }
     public function courses()
@@ -27,7 +30,20 @@ class DocentenController extends Controller
 
     public function journals()
     {
-        return view('docenten/logboeken');
+        $journals = Journal::with('course')->get();
+
+        return view('docenten/logboeken', [
+            'journals' => $journals
+        ]);
+    }
+
+    public function showJournal(Journal $journal)
+    {
+        $journals = Journal::with('course')->get();
+
+        return view('docenten/logboeken', [
+            'journals' => $journals
+        ]);
     }
 
     public function trails()

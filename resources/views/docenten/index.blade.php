@@ -18,21 +18,21 @@
             </div>
         </div>
         <div class="row">
-            @yield('vakken')
+            @include('vakken')
         </div>
         <div class="row">
-            @yield('klassen')
+            @include('klassen')
         </div>
         <div class="row">
-            @yield('percentages')
-        </div><!--/.row-->
+            @include('percentages')
+        </div>
 
         <div class="row">
-            @yield('meldingen')
-        </div><!--/.col-->
+            @include('meldingen')
+        </div>
 
         <div class="col-md-4">
-            @yield('to-do')
-        </div><!--/.col-->
-    </div><!--/.row-->
+            @include('to-do')
+        </div>
+    </div>
 @endsection
