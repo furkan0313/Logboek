@@ -38,7 +38,12 @@ class EntryController extends Controller
      */
     public function store(Request $request)
     {
-        $entry = Entry::create($request->except(['_token', '_method']));
+        $entry = JournalEntry::create(
+            [
+            "remark" => $request->remark,
+            "user_id" => $request->user()->id,
+            ]
+        );
         return response()->json($entry);
     }
 

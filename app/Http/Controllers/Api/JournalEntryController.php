@@ -37,7 +37,8 @@ class JournalEntryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $journalEntry = JournalEntry::create($request->except(['_token', '_method']));
+        return response()->json($journalEntry);
     }
 
     /**

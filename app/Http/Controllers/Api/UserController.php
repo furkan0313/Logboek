@@ -38,8 +38,14 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $user = User::create($request->except(['_token','_method']));
 
+        $user = User::create(
+            [
+                "name" => $request->name,
+                "email" => $request->email,
+                "password"=>bcrypt($request->password)
+            ]
+        );
         return response()->json($user);
     }
 

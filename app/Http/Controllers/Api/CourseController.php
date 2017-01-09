@@ -27,9 +27,7 @@ class CourseController extends Controller
      */
     public function create(Request $request)
     {
-        $course = Course::create($request->except(['_token', '_method']));
-
-        return response()->json(['success' => $course]);
+        //
     }
 
     /**
@@ -40,7 +38,8 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $course = Course::create($request->except(['_token', '_method']));
+        return response()->json($course);
     }
 
     /**

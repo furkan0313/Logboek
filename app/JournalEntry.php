@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class JournalEntry extends Model
 {
+    protected $fillable = ['remark', "user_id"];
+
     public function questions() {
    		return $this->belongsToMany(JournalQuestion::class)->withPivot('value');
    	}

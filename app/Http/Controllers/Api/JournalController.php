@@ -17,7 +17,7 @@ class JournalController extends Controller
     {
         $journals = Journal::all();
 
-        return response()->json($journals);
+        return response()->json("test".$journals);
     }
 
     /**
@@ -28,9 +28,7 @@ class JournalController extends Controller
      */
     public function create(Request $request)
     {
-        $journal = Journal::create($request->except(['_token', '_method']));
-
-        return response()->json($journal);
+        //
     }
 
 
@@ -42,7 +40,8 @@ class JournalController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $journal = Journal::create($request->except(['_token', '_method']));
+        return response()->json($journal);
     }
 
     /**
