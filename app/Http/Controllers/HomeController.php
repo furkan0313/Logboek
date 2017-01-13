@@ -38,7 +38,8 @@ class HomeController extends Controller
 
 
     }
-    public function store(Request $request)
+
+    public function store(Request $request) // What is stored here?
     {
 
         $course = new Course();
