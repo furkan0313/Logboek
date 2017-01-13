@@ -13,6 +13,7 @@ class DocentenController extends Controller
 
         return view('docenten/index');
     }
+
     public function courses()
     {
         return view('docenten/vakken');
